@@ -4,7 +4,7 @@
 
 int countOfTests = 0;
 
-void testAssert(double a, double b, double c, int ansCount, double ans1, double ans2, int count, double x1, double x2)
+void testAssert(const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2, const int count, const double x1, const double x2)
 {
     printf("TEST #%d - a = \t%lf, b = \t%lf, c = \t%lf\n"
             "FAILED: count of roots = %d, x1 = %lf, x2 = %lf\n"
@@ -15,7 +15,7 @@ void testAssert(double a, double b, double c, int ansCount, double ans1, double 
             ansCount, ans1, ans2);
 }
 
-void testQuadraticManual(double a, double b, double c, int ansCount, double ans1, double ans2)
+void testQuadraticManual(const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2)
 {
     ++countOfTests;
     double x1 = NAN, x2 = NAN;

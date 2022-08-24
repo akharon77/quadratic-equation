@@ -3,18 +3,7 @@
 #include <math.h>
 #include <stdio.h>
 
-/*!
- * Solve quadratic equation
- *
- * \param[in] a Coefficient of x^2
- * \param[in] b Coefficient of x
- * \param[in] c Free term
- * \param[out] x1 First solution if exist
- * \param[out] x2 Second solution if exist
- * 
- * \return Count of solutions
- */
-int solveSquare(double a, double b, double c, double *x1, double *x2)
+int solveSquare(const double a, const double b, const double c, double *x1, double *x2)
 {
     assert(std::isfinite(a));
     assert(std::isfinite(b));
@@ -61,16 +50,7 @@ int solveSquare(double a, double b, double c, double *x1, double *x2)
     return ERROR_RET;
 }
 
-/*!
- * Solve linear equation
- *
- * \param[in] a Coefficient of x
- * \param[in] b Free term
- * \param[out] x Solution if exist
- *
- * \return Count of solutions
- */
-int solveLinear(double a, double b, double *x)
+int solveLinear(const double a, const double b, double *x)
 {
     assert(std::isfinite(a));
     assert(std::isfinite(b));
@@ -90,9 +70,6 @@ int solveLinear(double a, double b, double *x)
     return ERROR_RET;
 }
 
-/*!
- * Clear buffer of stdin
- */
 void clear_input()
 {
     int temp = '\0';
@@ -103,12 +80,7 @@ void clear_input()
     while (temp != '\n' && temp != EOF);
 }
 
-/*!
- * Return sign of number taking into account the error
- *
- * \return -1 if negative, 0 if zero, 1 if positive
- */
-int sign(double n)
+int sign(const double n)
 {
     assert(std::isfinite(n));
 
@@ -119,22 +91,12 @@ int sign(double n)
     return 0;
 }
 
-/*!
- * Checks two numbers for equality taking into account the error
- *
- * \return true if equal else false
- */
-bool equal(double a, double b)
+bool equal(const double a, const double b)
 {
     return a - EPS < b && b < a + EPS;
 }
 
-/*!
- * Checks if the number is equal to zero taking into account the error
- *
- * \return true if zero, else false
- */
-bool zeroEqual(double n)
+bool zeroEqual(const double n)
 {
     return !sign(n);
 }
