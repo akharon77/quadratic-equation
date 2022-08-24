@@ -58,10 +58,19 @@ int  sign(double n);
 
 /*!
  * Clear buffer of stdin
+ *
+ * \return true if buffer was filled by spaces and etc else false
  */
-void clear_input();
+bool clear_input();
 
 void testQuadraticManual(double a, double b, double c, int ansCount, double ans1, double ans2);
-void testAssert(double a, double b, double c, int ansCount, double ans1, double ans2, int count, double x1, double x2);
+void testQuadraticAssert(double a, double b, double c, int ansCount, double ans1, double ans2, int count, double x1, double x2);
+void testLinearAssert(const double a, const double b, const int ansCount, const double ans, const int count, const double x);
+void testLinearManual(const double a, const double b, const int ansCount, const double ans);
+void testNumAndResAssert(const double n, const int ans, const int res);
+void testZeroEqualManual(const double n, const bool ans);
+void testSignManual(const double n, const int ans);
+void testEqualAssert(const double a, const double b, const bool ans, const bool res);
+void testEqualManual(const double a, const double b, const bool ans);
 
 #endif

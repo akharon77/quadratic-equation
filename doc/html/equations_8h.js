@@ -7,7 +7,7 @@ var equations_8h =
       [ "INF_SOLUTIONS", "equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168ac4b24b361f6a2739283472501620cedb", null ],
       [ "ERROR_RET", "equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a1bfec282325a909218965ecab9cc1412", null ]
     ] ],
-    [ "clear_input", "equations_8h.html#a5fed5e5d05ab07ac96ba3d483807da48", null ],
+    [ "clear_input", "equations_8h.html#a30c686b3c9e1ceb9464ae08218b731b0", null ],
     [ "equal", "equations_8h.html#a1591fe891371002ed473166e626dc2a3", null ],
     [ "sign", "equations_8h.html#adc6d22ec5fc7584d4a9c4fb54b696725", null ],
     [ "solveLinear", "equations_8h.html#ae0d929239618e5712a4dfd6ccf3a2ef8", null ],

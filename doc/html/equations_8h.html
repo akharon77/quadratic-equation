@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('equations_8h.html',''); initResizable(
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:aad6d6c64a88e64f99c12e5c5b62be168"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168">SOLUTIONS</a> { <br />
-&#160;&#160;<a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a6de99e6dad771f82cf67ae1691db9417">ZERO_SOLUTIONS</a> = 0
+&#160;&#160;<a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a6de99e6dad771f82cf67ae1691db9417">ZERO_SOLUTIONS</a>
 , <a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a0451cd6d5aa789cdc383e452dd2c0bd7">ONE_SOLUTION</a>
 , <a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a7b4b3bca57d544a80aaed928315a1c75">TWO_SOLUTIONS</a>
 , <a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168ac4b24b361f6a2739283472501620cedb">INF_SOLUTIONS</a> = 42
@@ -118,8 +118,8 @@ Functions</h2></td></tr>
 <tr class="separator:ac38e892c677ce0b12a0413e57839957d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc6d22ec5fc7584d4a9c4fb54b696725"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#adc6d22ec5fc7584d4a9c4fb54b696725">sign</a> (double n)</td></tr>
 <tr class="separator:adc6d22ec5fc7584d4a9c4fb54b696725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fed5e5d05ab07ac96ba3d483807da48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a5fed5e5d05ab07ac96ba3d483807da48">clear_input</a> ()</td></tr>
-<tr class="separator:a5fed5e5d05ab07ac96ba3d483807da48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c686b3c9e1ceb9464ae08218b731b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a30c686b3c9e1ceb9464ae08218b731b0">clear_input</a> ()</td></tr>
+<tr class="separator:a30c686b3c9e1ceb9464ae08218b731b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5755fedb6553b45d654f31dbe36d60a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a5755fedb6553b45d654f31dbe36d60a3">testQuadraticManual</a> (double a, double b, double c, int ansCount, double ans1, double ans2)</td></tr>
 <tr class="separator:a5755fedb6553b45d654f31dbe36d60a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1574bb4fdbaa08b82c8f7e35aaad5698"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a1574bb4fdbaa08b82c8f7e35aaad5698">testAssert</a> (double a, double b, double c, int ansCount, double ans1, double ans2, int count, double x1, double x2)</td></tr>
@@ -153,21 +153,22 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5fed5e5d05ab07ac96ba3d483807da48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fed5e5d05ab07ac96ba3d483807da48">&#9670;&nbsp;</a></span>clear_input()</h2>
+<a id="a30c686b3c9e1ceb9464ae08218b731b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c686b3c9e1ceb9464ae08218b731b0">&#9670;&nbsp;</a></span>clear_input()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void clear_input </td>
+          <td class="memname">bool clear_input </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Clear buffer of stdin </p>
+<p>Clear buffer of stdin</p>
+<dl class="section return"><dt>Returns</dt><dd>true if buffer was filled by spaces and etc else false </dd></dl>
 
 </div>
 </div>

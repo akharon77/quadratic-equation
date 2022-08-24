@@ -25,7 +25,7 @@ int solveSquare(const double a, const double b, const double c, double *x1, doub
 
         if (sign(D) < 0)
         {
-            return 0;
+            return ZERO_SOLUTIONS;
         }
         else if (sign(D) > 0)
         {
@@ -38,12 +38,12 @@ int solveSquare(const double a, const double b, const double c, double *x1, doub
                 *x1 = *x2;
                 *x2 = buf;
             }
-            return 2;
+            return TWO_SOLUTIONS;
         }
         else
         {
             *x1 = -b / (2 * a);
-            return 1;
+            return ONE_SOLUTION;
         }
     }
 
@@ -57,27 +57,33 @@ int solveLinear(const double a, const double b, double *x)
 
     assert(x != NULL);
 
+    *x = NAN;
+
     if (zeroEqual(a))
     {
-        return zeroEqual(b) ? INF_SOLUTIONS : 0;
+        return zeroEqual(b) ? INF_SOLUTIONS : ZERO_SOLUTIONS;
     }
     else
     {
         *x = -b / a;
-        return 1;
+        return ONE_SOLUTION;
     }
 
     return ERROR_RET;
 }
 
-void clear_input()
+bool clear_input()
 {
+    bool isSpace = true;
     int temp = '\0';
     do
     {
         temp = getchar();
+        if (temp != ' ' && temp != '\t' && temp != '\n')
+            isSpace = false;
     }
     while (temp != '\n' && temp != EOF);
+    return isSpace;
 }
 
 int sign(const double n)

@@ -1,9 +1,9 @@
 var equations_8cpp =
 [
-    [ "clear_input", "equations_8cpp.html#a5fed5e5d05ab07ac96ba3d483807da48", null ],
-    [ "equal", "equations_8cpp.html#a1591fe891371002ed473166e626dc2a3", null ],
-    [ "sign", "equations_8cpp.html#adc6d22ec5fc7584d4a9c4fb54b696725", null ],
-    [ "solveLinear", "equations_8cpp.html#ae0d929239618e5712a4dfd6ccf3a2ef8", null ],
-    [ "solveSquare", "equations_8cpp.html#a32213261c1ffacc09468324a3aa2f1de", null ],
-    [ "zeroEqual", "equations_8cpp.html#ac38e892c677ce0b12a0413e57839957d", null ]
+    [ "clear_input", "equations_8cpp.html#a30c686b3c9e1ceb9464ae08218b731b0", null ],
+    [ "equal", "equations_8cpp.html#a73a6e73f42736705bda4c2faa020072c", null ],
+    [ "sign", "equations_8cpp.html#aebe92b2c47d6de1d8cf6dbf38aa99a95", null ],
+    [ "solveLinear", "equations_8cpp.html#a7ef03d8e4a04da7423736e81227acea6", null ],
+    [ "solveSquare", "equations_8cpp.html#a1853b18dd8d566a9b009efd2c1bd7310", null ],
+    [ "zeroEqual", "equations_8cpp.html#ad58d29b2dc76e820eb2d8a73e99134b8", null ]
 ];
