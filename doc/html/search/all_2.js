@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inf_5fsolutions_5',['INF_SOLUTIONS',['../equations_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac4b24b361f6a2739283472501620cedb',1,'equations.h']]]
+  ['inf_5fsolutions_7',['INF_SOLUTIONS',['../equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168ac4b24b361f6a2739283472501620cedb',1,'equations.h']]]
 ];

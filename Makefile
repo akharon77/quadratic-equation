@@ -2,14 +2,17 @@ CXXFLAGS=-D_DEBUG -ggdb3 -std=c++20 -O0 -Wall -Wextra -Weffc++ -Waggressive-loop
 
 all: quadratic
 
-quadratic: main.o equations.o
-	g++ main.o equations.o -o quad
+quadratic: main.o equations.o unit_test.o
+	g++ main.o equations.o unit_test.o -o quad.out
 
 main.o: main.cpp
 	g++ $(CXXFLAGS) -c main.cpp
 
 equations.o: equations.cpp
 	g++ $(CXXFLAGS) -c equations.cpp
+
+unit_test.o: unit_test.cpp
+	g++ $(CXXFLAGS) -c unit_test.cpp
 
 clean:
 	rm -rf *.o quad

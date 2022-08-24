@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Quadratic equation: equations.h File Reference</title>
+<title>Quadratic equation: /home/timurabdullin/projects/quadratic_equation/equations.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('equations_8h.html',''); initResizable(
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">equations.h File Reference</div>  </div>
+<div class="title">/home/timurabdullin/projects/quadratic_equation/equations.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -95,10 +95,16 @@ $(document).ready(function(){initNavTree('equations_8h.html',''); initResizable(
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="equations_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac4b24b361f6a2739283472501620cedb">INF_SOLUTIONS</a> = 42
-, <a class="el" href="equations_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1bfec282325a909218965ecab9cc1412">ERROR_RET</a> = -1
+<tr class="memitem:aad6d6c64a88e64f99c12e5c5b62be168"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168">SOLUTIONS</a> { <br />
+&#160;&#160;<a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a6de99e6dad771f82cf67ae1691db9417">ZERO_SOLUTIONS</a> = 0
+, <a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a0451cd6d5aa789cdc383e452dd2c0bd7">ONE_SOLUTION</a>
+, <a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a7b4b3bca57d544a80aaed928315a1c75">TWO_SOLUTIONS</a>
+, <a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168ac4b24b361f6a2739283472501620cedb">INF_SOLUTIONS</a> = 42
+, <br />
+&#160;&#160;<a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a1bfec282325a909218965ecab9cc1412">ERROR_RET</a> = -1
+<br />
  }</td></tr>
-<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aad6d6c64a88e64f99c12e5c5b62be168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -106,12 +112,18 @@ Functions</h2></td></tr>
 <tr class="separator:a32213261c1ffacc09468324a3aa2f1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0d929239618e5712a4dfd6ccf3a2ef8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#ae0d929239618e5712a4dfd6ccf3a2ef8">solveLinear</a> (double a, double b, double *x)</td></tr>
 <tr class="separator:ae0d929239618e5712a4dfd6ccf3a2ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1591fe891371002ed473166e626dc2a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a1591fe891371002ed473166e626dc2a3">equal</a> (double a, double b)</td></tr>
+<tr class="separator:a1591fe891371002ed473166e626dc2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac38e892c677ce0b12a0413e57839957d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#ac38e892c677ce0b12a0413e57839957d">zeroEqual</a> (double n)</td></tr>
 <tr class="separator:ac38e892c677ce0b12a0413e57839957d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc6d22ec5fc7584d4a9c4fb54b696725"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#adc6d22ec5fc7584d4a9c4fb54b696725">sign</a> (double n)</td></tr>
 <tr class="separator:adc6d22ec5fc7584d4a9c4fb54b696725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fed5e5d05ab07ac96ba3d483807da48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a5fed5e5d05ab07ac96ba3d483807da48">clear_input</a> ()</td></tr>
 <tr class="separator:a5fed5e5d05ab07ac96ba3d483807da48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5755fedb6553b45d654f31dbe36d60a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a5755fedb6553b45d654f31dbe36d60a3">testQuadraticManual</a> (double a, double b, double c, int ansCount, double ans1, double ans2)</td></tr>
+<tr class="separator:a5755fedb6553b45d654f31dbe36d60a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1574bb4fdbaa08b82c8f7e35aaad5698"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a1574bb4fdbaa08b82c8f7e35aaad5698">testAssert</a> (double a, double b, double c, int ansCount, double ans1, double ans2, int count, double x1, double x2)</td></tr>
+<tr class="separator:a1574bb4fdbaa08b82c8f7e35aaad5698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -119,20 +131,23 @@ Variables</h2></td></tr>
 <tr class="separator:afe01386a82fedc016455a43c20280a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="aad6d6c64a88e64f99c12e5c5b62be168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad6d6c64a88e64f99c12e5c5b62be168">&#9670;&nbsp;</a></span>SOLUTIONS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum</td>
+          <td class="memname">enum <a class="el" href="equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168">SOLUTIONS</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac4b24b361f6a2739283472501620cedb"></a>INF_SOLUTIONS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba1bfec282325a909218965ecab9cc1412"></a>ERROR_RET&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aad6d6c64a88e64f99c12e5c5b62be168a6de99e6dad771f82cf67ae1691db9417"></a>ZERO_SOLUTIONS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aad6d6c64a88e64f99c12e5c5b62be168a0451cd6d5aa789cdc383e452dd2c0bd7"></a>ONE_SOLUTION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aad6d6c64a88e64f99c12e5c5b62be168a7b4b3bca57d544a80aaed928315a1c75"></a>TWO_SOLUTIONS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aad6d6c64a88e64f99c12e5c5b62be168ac4b24b361f6a2739283472501620cedb"></a>INF_SOLUTIONS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aad6d6c64a88e64f99c12e5c5b62be168a1bfec282325a909218965ecab9cc1412"></a>ERROR_RET&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -153,6 +168,36 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Clear buffer of stdin </p>
+
+</div>
+</div>
+<a id="a1591fe891371002ed473166e626dc2a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1591fe891371002ed473166e626dc2a3">&#9670;&nbsp;</a></span>equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool equal </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks two numbers for equality taking into account the error</p>
+<dl class="section return"><dt>Returns</dt><dd>true if equal else false </dd></dl>
 
 </div>
 </div>
@@ -275,6 +320,128 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Count of solutions </dd></dl>
+
+</div>
+</div>
+<a id="a1574bb4fdbaa08b82c8f7e35aaad5698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1574bb4fdbaa08b82c8f7e35aaad5698">&#9670;&nbsp;</a></span>testAssert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testAssert </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ansCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ans1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ans2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5755fedb6553b45d654f31dbe36d60a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5755fedb6553b45d654f31dbe36d60a3">&#9670;&nbsp;</a></span>testQuadraticManual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testQuadraticManual </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ansCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ans1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ans2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

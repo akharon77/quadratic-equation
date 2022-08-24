@@ -24,6 +24,8 @@ int solveSquare(double a, double b, double c, double *x1, double *x2)
     assert(x2 != NULL);
     assert(x1 != x2);
 
+    *x1 = *x2 = NAN;
+
     if (zeroEqual(a))
     {
         return solveLinear(b, c, x1);
@@ -41,6 +43,12 @@ int solveSquare(double a, double b, double c, double *x1, double *x2)
             double sqrt_D = sqrt(D);
             *x1 = 0. + (-b - sqrt_D) / (2 * a);
             *x2 = 0. + (-b + sqrt_D) / (2 * a);
+            if (*x1 > *x2)
+            {
+                double buf = *x1;
+                *x1 = *x2;
+                *x2 = buf;
+            }
             return 2;
         }
         else
@@ -109,6 +117,16 @@ int sign(double n)
     else if (n > EPS)
         return 1;
     return 0;
+}
+
+/*!
+ * Checks two numbers for equality taking into account the error
+ *
+ * \return true if equal else false
+ */
+bool equal(double a, double b)
+{
+    return a - EPS < b && b < a + EPS;
 }
 
 /*!

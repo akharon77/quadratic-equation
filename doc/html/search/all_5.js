@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zeroequal_11',['zeroEqual',['../equations_8cpp.html#ac38e892c677ce0b12a0413e57839957d',1,'zeroEqual(double n):&#160;equations.cpp'],['../equations_8h.html#ac38e892c677ce0b12a0413e57839957d',1,'zeroEqual(double n):&#160;equations.cpp']]]
+  ['readme_11',['README',['../md__home_timurabdullin_projects_quadratic_equation__r_e_a_d_m_e.html',1,'']]],
+  ['readme_2emd_12',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
 ];

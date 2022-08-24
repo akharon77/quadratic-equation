@@ -4,6 +4,18 @@
 
 int main()
 {
+
+#ifdef _DEBUG
+    testQuadraticManual( 1,  1,  1, ZERO_SOLUTIONS, NAN,    NAN);
+    testQuadraticManual( 1,  0,  1, ZERO_SOLUTIONS, NAN,    NAN);
+    testQuadraticManual(-1, -1,  0, TWO_SOLUTIONS,  -1,     0);
+    testQuadraticManual( 1,  2,  1, ONE_SOLUTION,   -1,     NAN);
+    testQuadraticManual( 0,  0,  0, INF_SOLUTIONS,  NAN,    NAN);
+    testQuadraticManual( 0,  1,  2, ONE_SOLUTION,   -2,     NAN);
+    testQuadraticManual( 0,  5,  2, ONE_SOLUTION,   -0.4,   NAN);
+    testQuadraticManual( 0,  0,  1, ZERO_SOLUTIONS, NAN,    NAN);
+#endif
+
     double a = NAN, b = NAN, c = NAN;
 
     printf("Input coefficients of quadratic equation ax^2 + bx + c = 0\n");
@@ -19,13 +31,13 @@ int main()
     
     switch (nSolutions)
     {
-        case 0: 
+        case ZERO_SOLUTIONS: 
             printf("No solutions");
             break;
-        case 1:
+        case ONE_SOLUTION:
             printf("One solution:\n\tX = %lf", x1);
             break;
-        case 2:
+        case TWO_SOLUTIONS:
             printf("Two solutions\n\tX1 = %lf,\n\tX2 = %lf", x1, x2);
             break;
         case INF_SOLUTIONS:
