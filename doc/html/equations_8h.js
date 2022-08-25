@@ -12,8 +12,16 @@ var equations_8h =
     [ "sign", "equations_8h.html#adc6d22ec5fc7584d4a9c4fb54b696725", null ],
     [ "solveLinear", "equations_8h.html#ae0d929239618e5712a4dfd6ccf3a2ef8", null ],
     [ "solveSquare", "equations_8h.html#a32213261c1ffacc09468324a3aa2f1de", null ],
-    [ "testAssert", "equations_8h.html#a1574bb4fdbaa08b82c8f7e35aaad5698", null ],
-    [ "testQuadraticManual", "equations_8h.html#a5755fedb6553b45d654f31dbe36d60a3", null ],
+    [ "testDone", "equations_8h.html#a7bdd04e4ab286c5311b6de70cade302f", null ],
+    [ "testEqualAssert", "equations_8h.html#ab0599937671c82e37985944f1f8b2eef", null ],
+    [ "testEqualManual", "equations_8h.html#a1548b9c5d427a792a73371c82671b4d0", null ],
+    [ "testLinearAssert", "equations_8h.html#a3e960acc11cfdb0cbf8c4baae88a35ab", null ],
+    [ "testLinearManual", "equations_8h.html#ac124ed8529b384a5f1c49a08d04dfb3d", null ],
+    [ "testNumAndResAssert", "equations_8h.html#a1c3ce3f5ce2e2381e535c873ced0d9a4", null ],
+    [ "testQuadraticAssert", "equations_8h.html#a5468bf49b1c99b379146b6f109610644", null ],
+    [ "testQuadraticManual", "equations_8h.html#aa2ef979ea82362e13520d54d7a212bf0", null ],
+    [ "testSignManual", "equations_8h.html#a14246430b6b32f743163fa40235157e9", null ],
+    [ "testZeroEqualManual", "equations_8h.html#af924de06949465c63c5631063f1d0694", null ],
     [ "zeroEqual", "equations_8h.html#ac38e892c677ce0b12a0413e57839957d", null ],
     [ "EPS", "equations_8h.html#afe01386a82fedc016455a43c20280a97", null ]
 ];

@@ -6,40 +6,43 @@ int main()
 {
 
 #ifdef _DEBUG
-    testQuadraticManual( 1,  1,  1, ZERO_SOLUTIONS, NAN,    NAN);
-    testQuadraticManual( 1,  0,  1, ZERO_SOLUTIONS, NAN,    NAN);
-    testQuadraticManual(-1, -1,  0, TWO_SOLUTIONS,  -1,     0  );
-    testQuadraticManual( 1,  2,  1, ONE_SOLUTION,   -1,     NAN);
-    testQuadraticManual( 0,  0,  0, INF_SOLUTIONS,  NAN,    NAN);
-    testQuadraticManual( 0,  1,  2, ONE_SOLUTION,   -2,     NAN);
-    testQuadraticManual( 0,  5,  2, ONE_SOLUTION,   -0.4,   NAN);
-    testQuadraticManual( 0,  0,  1, ZERO_SOLUTIONS, NAN,    NAN);
+    int countTestsDone =
+      testQuadraticManual( 1,  1,  1, ZERO_SOLUTIONS, NAN,    NAN)
+    + testQuadraticManual( 1,  0,  1, ZERO_SOLUTIONS, NAN,    NAN)
+    + testQuadraticManual(-1, -1,  0, TWO_SOLUTIONS,  -1,     0  )
+    + testQuadraticManual( 1,  2,  1, ONE_SOLUTION,   -1,     NAN)
+    + testQuadraticManual( 0,  0,  0, INF_SOLUTIONS,  NAN,    NAN)
+    + testQuadraticManual( 0,  1,  2, ONE_SOLUTION,   -2,     NAN)
+    + testQuadraticManual( 0,  5,  2, ONE_SOLUTION,   -0.4,   NAN)
+    + testQuadraticManual( 0,  0,  1, ZERO_SOLUTIONS, NAN,    NAN)
 
-    testLinearManual   ( 0,  0,     INF_SOLUTIONS,  NAN        );
-    testLinearManual   ( 1,  1,     ONE_SOLUTION,   -1         );
-    testLinearManual   (-1,  2,     ONE_SOLUTION,   2          );
-    testLinearManual   ( 0,  1,     ZERO_SOLUTIONS, NAN        );
-    
-    testSignManual(     4.4,  1);
-    testSignManual(    -4.5, -1);
-    testSignManual(    -0.5, -1);
-    testSignManual(     0.5,  1);
-    testSignManual(       0,  0);
-    testSignManual( 0.00001,  1);
+    + testLinearManual   ( 0,  0,     INF_SOLUTIONS,  NAN        )
+    + testLinearManual   ( 1,  1,     ONE_SOLUTION,   -1         )
+    + testLinearManual   (-1,  2,     ONE_SOLUTION,   2          )
+    + testLinearManual   ( 0,  1,     ZERO_SOLUTIONS, NAN        )
 
-    testZeroEqualManual(     1, 0);
-    testZeroEqualManual(     3, 0);
-    testZeroEqualManual( 0.001, 0);
-    testZeroEqualManual(-0.001, 0);
-    testZeroEqualManual(   -11, 0);
+    + testSignManual(     4.4,  1)
+    + testSignManual(    -4.5, -1)
+    + testSignManual(    -0.5, -1)
+    + testSignManual(     0.5,  1)
+    + testSignManual(       0,  0)
+    + testSignManual( 0.00001,  1)
 
-    testEqualManual(     1,     2, 0);
-    testEqualManual(-0.001,     0, 0);
-    testEqualManual(     1,    -3, 0);
-    testEqualManual(   100, 0.001, 0);
-    testEqualManual(    -1, -2.01, 0);
-    testEqualManual(     1,     1, 1);
-    testEqualManual(    -1,    -1, 1);
+    + testZeroEqualManual(     1, 0)
+    + testZeroEqualManual(     3, 0)
+    + testZeroEqualManual( 0.001, 0)
+    + testZeroEqualManual(-0.001, 0)
+    + testZeroEqualManual(   -11, 0)
+
+    + testEqualManual(     1,     2, 0)
+    + testEqualManual(-0.001,     0, 0)
+    + testEqualManual(     1,    -3, 0)
+    + testEqualManual(   100, 0.001, 0)
+    + testEqualManual(    -1, -2.01, 0)
+    + testEqualManual(     1,     1, 1)
+    + testEqualManual(    -1,    -1, 1);
+
+    printf("\x1b[1m%d tests done\n\x1b[0m", countTestsDone);
 #endif
 
     double a = NAN, b = NAN, c = NAN;
