@@ -26,6 +26,14 @@ var NAVTREE =
 [
   [ "Quadratic equation", "index.html", [
     [ "README", "md__home_timurabdullin_projects_quadratic_equation__r_e_a_d_m_e.html", null ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
@@ -41,7 +49,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"equations_8cpp.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

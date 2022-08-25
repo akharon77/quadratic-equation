@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['main_9',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_10',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['main_2ed_11',['main.d',['../main_8d.html',1,'']]]
+  ['inf_5fsolutions_10',['INF_SOLUTIONS',['../equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168ac4b24b361f6a2739283472501620cedb',1,'equations.h']]]
 ];

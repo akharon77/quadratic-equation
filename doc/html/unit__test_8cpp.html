@@ -90,11 +90,26 @@ $(document).ready(function(){initNavTree('unit__test_8cpp.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="equations_8h_source.html">equations.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="unit__test_8h_source.html">unit_test.h</a>&quot;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a8682c483b6eacb62b726fd076a5bccf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#a8682c483b6eacb62b726fd076a5bccf7">testForce</a> ()</td></tr>
+<tr class="separator:a8682c483b6eacb62b726fd076a5bccf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8364f57215fc5d2a8c36509a1028c3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#af8364f57215fc5d2a8c36509a1028c3a">testFromFile</a> ()</td></tr>
+<tr class="separator:af8364f57215fc5d2a8c36509a1028c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc4b38c0c3bb614a44d3db9187a756a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#a9fc4b38c0c3bb614a44d3db9187a756a">testFromFileQuadratic</a> ()</td></tr>
+<tr class="separator:a9fc4b38c0c3bb614a44d3db9187a756a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5207d8ae8e8dc4487edf433e7e470bc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#a5207d8ae8e8dc4487edf433e7e470bc2">testFromFileLinear</a> ()</td></tr>
+<tr class="separator:a5207d8ae8e8dc4487edf433e7e470bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67004c5d2fdd688fcde209e1b31c99d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#a67004c5d2fdd688fcde209e1b31c99d8">testFromFileSign</a> ()</td></tr>
+<tr class="separator:a67004c5d2fdd688fcde209e1b31c99d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5edefb73dbbe867911af549cf79525e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#af5edefb73dbbe867911af549cf79525e">testFromFileZeroEqual</a> ()</td></tr>
+<tr class="separator:af5edefb73dbbe867911af549cf79525e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbd33902a0267403aadba327ae14939"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#aabbd33902a0267403aadba327ae14939">testFromFileEqual</a> ()</td></tr>
+<tr class="separator:aabbd33902a0267403aadba327ae14939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa7b3450dd823de611b3077fff5c345a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#afa7b3450dd823de611b3077fff5c345a">testQuadraticAssert</a> (const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2, const int count, const double x1, const double x2)</td></tr>
 <tr class="separator:afa7b3450dd823de611b3077fff5c345a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a334bd61e5fea2cff057770529d0fc3a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unit__test_8cpp.html#a334bd61e5fea2cff057770529d0fc3a7">testQuadraticManual</a> (const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2)</td></tr>
@@ -207,6 +222,127 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8682c483b6eacb62b726fd076a5bccf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8682c483b6eacb62b726fd076a5bccf7">&#9670;&nbsp;</a></span>testForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testForce </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Starts forced unit-tests for program </p>
+
+</div>
+</div>
+<a id="af8364f57215fc5d2a8c36509a1028c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8364f57215fc5d2a8c36509a1028c3a">&#9670;&nbsp;</a></span>testFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void testFromFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Starts unit-test for program from test-files </p>
+
+</div>
+</div>
+<a id="aabbd33902a0267403aadba327ae14939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbd33902a0267403aadba327ae14939">&#9670;&nbsp;</a></span>testFromFileEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testFromFileEqual </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5207d8ae8e8dc4487edf433e7e470bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5207d8ae8e8dc4487edf433e7e470bc2">&#9670;&nbsp;</a></span>testFromFileLinear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testFromFileLinear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9fc4b38c0c3bb614a44d3db9187a756a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc4b38c0c3bb614a44d3db9187a756a">&#9670;&nbsp;</a></span>testFromFileQuadratic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testFromFileQuadratic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67004c5d2fdd688fcde209e1b31c99d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67004c5d2fdd688fcde209e1b31c99d8">&#9670;&nbsp;</a></span>testFromFileSign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testFromFileSign </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5edefb73dbbe867911af549cf79525e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5edefb73dbbe867911af549cf79525e">&#9670;&nbsp;</a></span>testFromFileZeroEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int testFromFileZeroEqual </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -11,6 +11,48 @@ enum SOLUTIONS
     ERROR_RET = -1
 };
 
+enum PROGRAM_MODES
+{
+    TEST_FORCE_MODE,
+    TEST_FILE_MODE,
+    RUN_MODE,
+    ERROR_MODE
+};
+
+const int NMODES = 3;
+const struct MODE
+{
+    const char *strForm;
+    int modeID;
+} MODES[] = 
+    {
+        {"--test-force", TEST_FORCE_MODE},
+        {"--test-file",  TEST_FILE_MODE},
+        {"--run",        RUN_MODE}
+    };
+
+/*!
+ * Starts forced unit-tests for program
+ */
+void testForce();
+
+/*!
+ * Starts unit-test for program from test-files
+ */
+void testFromFile();
+
+/*!
+ * Run main program for solving equation
+ */
+void run();
+
+/*!
+ * Shows mode for program
+ *
+ * \return RUN_MODE, TEST_FORCE_MODE or TEST_FILE_MODE in right case else ERROR_MODE
+ */
+int getMode(int argc, const char *argv[]);
+
 /*!
  * Solve quadratic equation
  *
@@ -22,7 +64,7 @@ enum SOLUTIONS
  * 
  * \return Count of solutions
  */
-int  solveSquare(double a, double b, double c, double *x1, double *x2);
+int  solveSquare(double a, double b, double c, double * const x1, double * const x2);
 
 /*!
  * Solve linear equation
@@ -62,20 +104,5 @@ int  sign(double n);
  * \return true if buffer was filled by spaces and etc else false
  */
 bool clear_input();
-
-void testQuadraticAssert(double a, double b, double c, int ansCount, double ans1, double ans2, int count, double x1, double x2);
-int testQuadraticManual(double a, double b, double c, int ansCount, double ans1, double ans2);
-
-void testLinearAssert(const double a, const double b, const int ansCount, const double ans, const int count, const double x);
-int testLinearManual(const double a, const double b, const int ansCount, const double ans);
-
-void testNumAndResAssert(const double n, const int ans, const int res);
-int testZeroEqualManual(const double n, const bool ans);
-int testSignManual(const double n, const int ans);
-
-void testEqualAssert(const double a, const double b, const bool ans, const bool res);
-int testEqualManual(const double a, const double b, const bool ans);
-
-void testDone();
 
 #endif

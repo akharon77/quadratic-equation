@@ -2,8 +2,9 @@
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>
+#include <string.h>
 
-int solveSquare(const double a, const double b, const double c, double *x1, double *x2)
+int solveSquare(const double a, const double b, const double c, double * const x1, double * const x2)
 {
     assert(std::isfinite(a));
     assert(std::isfinite(b));
@@ -105,4 +106,22 @@ bool equal(const double a, const double b)
 bool zeroEqual(const double n)
 {
     return !sign(n);
+}
+
+int getMode(int argc, const char *argv[])
+{
+    int retMode = ERROR_MODE;
+    if (argc == 1)
+        return RUN_MODE;
+    else
+        for (int i = 1; i < argc; ++i)
+            for (int j = 0; j < NMODES; ++j)
+                if (strcmp(MODES[j].strForm, argv[i]) == 0)
+                {
+                    if (retMode != ERROR_MODE)
+                        return ERROR_MODE;
+                    else
+                        retMode = MODES[j].modeID;
+                }
+    return retMode;
 }

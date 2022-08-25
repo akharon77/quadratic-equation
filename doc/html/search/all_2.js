@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inf_5fsolutions_8',['INF_SOLUTIONS',['../equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168ac4b24b361f6a2739283472501620cedb',1,'equations.h']]]
+  ['getmode_9',['getMode',['../equations_8cpp.html#a8b7174e4d0e9222d8a33e914156e70fe',1,'getMode(int argc, const char *argv[]):&#160;equations.cpp'],['../equations_8h.html#a8b7174e4d0e9222d8a33e914156e70fe',1,'getMode(int argc, const char *argv[]):&#160;equations.cpp']]]
 ];

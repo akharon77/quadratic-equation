@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_44',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]]
+  ['getmode_66',['getMode',['../equations_8cpp.html#a8b7174e4d0e9222d8a33e914156e70fe',1,'getMode(int argc, const char *argv[]):&#160;equations.cpp'],['../equations_8h.html#a8b7174e4d0e9222d8a33e914156e70fe',1,'getMode(int argc, const char *argv[]):&#160;equations.cpp']]]
 ];

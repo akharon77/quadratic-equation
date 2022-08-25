@@ -1,9 +1,147 @@
 #include "equations.h"
+#include "unit_test.h"
 #include <math.h>
 #include <stdio.h>
 
 int countOfTests = 0;
 
+void testForce()
+{
+    int countTestsDone =
+          testQuadraticManual( 1,  1,  1, ZERO_SOLUTIONS, NAN,    NAN)
+        + testQuadraticManual( 1,  0,  1, ZERO_SOLUTIONS, NAN,    NAN)
+        + testQuadraticManual(-1, -1,  0, TWO_SOLUTIONS,  -1,     0  )
+        + testQuadraticManual( 1,  2,  1, ONE_SOLUTION,   -1,     NAN)
+        + testQuadraticManual( 0,  0,  0, INF_SOLUTIONS,  NAN,    NAN)
+        + testQuadraticManual( 0,  1,  2, ONE_SOLUTION,   -2,     NAN)
+        + testQuadraticManual( 0,  5,  2, ONE_SOLUTION,   -0.4,   NAN)
+        + testQuadraticManual( 0,  0,  1, ZERO_SOLUTIONS, NAN,    NAN)
+
+        + testLinearManual   ( 0,  0,     INF_SOLUTIONS,  NAN        )
+        + testLinearManual   ( 1,  1,     ONE_SOLUTION,   -1         )
+        + testLinearManual   (-1,  2,     ONE_SOLUTION,   2          )
+        + testLinearManual   ( 0,  1,     ZERO_SOLUTIONS, NAN        )
+
+        + testSignManual(    4.4,  1)
+        + testSignManual(   -4.5, -1)
+        + testSignManual(   -0.5, -1)
+        + testSignManual(    0.5,  1)
+        + testSignManual(      0,  0)
+        + testSignManual(0.00001,  1)
+
+        + testZeroEqualManual(     1, 0)
+        + testZeroEqualManual(     3, 0)
+        + testZeroEqualManual( 0.001, 0)
+        + testZeroEqualManual(-0.001, 0)
+        + testZeroEqualManual(   -11, 0)
+
+        + testEqualManual(     1,     2, 0)
+        + testEqualManual(-0.001,     0, 0)
+        + testEqualManual(     1,    -3, 0)
+        + testEqualManual(   100, 0.001, 0)
+        + testEqualManual(    -1, -2.01, 0)
+        + testEqualManual(     1,     1, 1)
+        + testEqualManual(    -1,    -1, 1);
+
+    printf("\x1b[1m%d tests done\n\x1b[0m", countTestsDone);
+}
+
+void testFromFile()
+{
+    int countTestsDone = 
+          testFromFileQuadratic()
+        + testFromFileLinear()
+        + testFromFileSign()
+        + testFromFileZeroEqual()
+        + testFromFileEqual();
+
+    printf("\x1b[1m%d tests done\n\x1b[0m", countTestsDone);
+}
+
+int testFromFileQuadratic()
+{
+    FILE *fin = fopen("quadratic_tests.txt", "r");
+    double a = NAN, b = NAN, c = NAN;
+    double ans1 = NAN, ans2 = NAN;
+    int count = 0, testCount = 0;
+    int res = 0;
+    fscanf(fin, "%d", &testCount);
+    for (int i = 0; i < testCount; ++i)
+    {
+        fscanf(fin, "%lf %lf %lf %d %lf %lf", &a, &b, &c, &count, &ans1, &ans2);
+        res += testQuadraticManual(a, b, c, count, ans1, ans2);
+    }
+    fclose(fin);
+    return res;
+}
+
+int testFromFileLinear()
+{
+    FILE *fin = fopen("linear_tests.txt", "r");
+    double a = NAN, b = NAN;
+    double ans = NAN;
+    int count = 0, testCount = 0;
+    int res = 0;
+    fscanf(fin, "%d", &testCount);
+    for (int i = 0; i < testCount; ++i)
+    {
+        fscanf(fin, "%lf %lf %d %lf", &a, &b, &count, &ans);
+        res += testLinearManual(a, b, count, ans);
+    }
+    fclose(fin);
+    return res;
+}
+
+int testFromFileSign()
+{
+    FILE *fin = fopen("sign_tests.txt", "r");
+    double n = NAN;
+    int ans = 0;
+    int testCount = 0;
+    int res = 0;
+    fscanf(fin, "%d", &testCount);
+    for (int i = 0; i < testCount; ++i)
+    {
+        fscanf(fin, "%lf %d", &n, &ans);
+        res += testSignManual(n, ans);
+    }
+    fclose(fin);
+    return res;
+}
+
+int testFromFileZeroEqual()
+{
+    FILE *fin = fopen("zero_equal_tests.txt", "r");
+    double n = NAN;
+    int ans = 0;
+    int testCount = 0;
+    int res = 0;
+    fscanf(fin, "%d", &testCount);
+    for (int i = 0; i < testCount; ++i)
+    {
+        fscanf(fin, "%lf %d", &n, &ans);
+        res += testZeroEqualManual(n, ans);
+    }
+    fclose(fin);
+    return res;
+}
+
+int testFromFileEqual()
+{
+    FILE *fin = fopen("equal_tests.txt", "r");
+    double a = NAN, b = NAN;
+    int ans = 0;
+    int testCount = 0;
+    int res = 0;
+    fscanf(fin, "%d", &testCount);
+    for (int i = 0; i < testCount; ++i)
+    {
+        fscanf(fin, "%lf %lf %d", &a, &b, &ans);
+        res += testEqualManual(a, b, ans);
+    }
+    fclose(fin);
+    return res;
+}
 void testQuadraticAssert(const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2, const int count, const double x1, const double x2)
 {
     printf("\x1b[31mTEST #%d - a = \t%lf, b = \t%lf, c = \t%lf\n"

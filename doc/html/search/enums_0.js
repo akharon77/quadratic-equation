@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solutions_61',['SOLUTIONS',['../equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168',1,'equations.h']]]
+  ['program_5fmodes_96',['PROGRAM_MODES',['../equations_8h.html#a847555108290b8c30e6cdff1eb9ae759',1,'equations.h']]]
 ];

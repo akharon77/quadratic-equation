@@ -92,11 +92,12 @@ $(document).ready(function(){initNavTree('equations_8cpp.html',''); initResizabl
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1853b18dd8d566a9b009efd2c1bd7310"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a1853b18dd8d566a9b009efd2c1bd7310">solveSquare</a> (const double a, const double b, const double c, double *x1, double *x2)</td></tr>
-<tr class="separator:a1853b18dd8d566a9b009efd2c1bd7310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9de8abe76b6c8d7ac1ef2ab47998384"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#ae9de8abe76b6c8d7ac1ef2ab47998384">solveSquare</a> (const double a, const double b, const double c, double *const x1, double *const x2)</td></tr>
+<tr class="separator:ae9de8abe76b6c8d7ac1ef2ab47998384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ef03d8e4a04da7423736e81227acea6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a7ef03d8e4a04da7423736e81227acea6">solveLinear</a> (const double a, const double b, double *x)</td></tr>
 <tr class="separator:a7ef03d8e4a04da7423736e81227acea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30c686b3c9e1ceb9464ae08218b731b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a30c686b3c9e1ceb9464ae08218b731b0">clear_input</a> ()</td></tr>
@@ -107,6 +108,8 @@ Functions</h2></td></tr>
 <tr class="separator:a73a6e73f42736705bda4c2faa020072c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad58d29b2dc76e820eb2d8a73e99134b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#ad58d29b2dc76e820eb2d8a73e99134b8">zeroEqual</a> (const double n)</td></tr>
 <tr class="separator:ad58d29b2dc76e820eb2d8a73e99134b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7174e4d0e9222d8a33e914156e70fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a8b7174e4d0e9222d8a33e914156e70fe">getMode</a> (int argc, const char *argv[])</td></tr>
+<tr class="separator:a8b7174e4d0e9222d8a33e914156e70fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a30c686b3c9e1ceb9464ae08218b731b0"></a>
@@ -155,6 +158,36 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Checks two numbers for equality taking into account the error</p>
 <dl class="section return"><dt>Returns</dt><dd>true if equal else false </dd></dl>
+
+</div>
+</div>
+<a id="a8b7174e4d0e9222d8a33e914156e70fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7174e4d0e9222d8a33e914156e70fe">&#9670;&nbsp;</a></span>getMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Shows mode for program</p>
+<dl class="section return"><dt>Returns</dt><dd>RUN_MODE, TEST_FORCE_MODE or TEST_FILE_MODE in right case else ERROR_MODE </dd></dl>
 
 </div>
 </div>
@@ -222,8 +255,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1853b18dd8d566a9b009efd2c1bd7310"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1853b18dd8d566a9b009efd2c1bd7310">&#9670;&nbsp;</a></span>solveSquare()</h2>
+<a id="ae9de8abe76b6c8d7ac1ef2ab47998384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9de8abe76b6c8d7ac1ef2ab47998384">&#9670;&nbsp;</a></span>solveSquare()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,13 +282,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">double *const&#160;</td>
           <td class="paramname"><em>x1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double *&#160;</td>
+          <td class="paramtype">double *const&#160;</td>
           <td class="paramname"><em>x2</em>&#160;</td>
         </tr>
         <tr>
