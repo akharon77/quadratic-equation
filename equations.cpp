@@ -51,7 +51,7 @@ int solveSquare(const double a, const double b, const double c, double * const x
     return ERROR_RET;
 }
 
-int solveLinear(const double a, const double b, double *x)
+int solveLinear(const double a, const double b, double * const x)
 {
     assert(std::isfinite(a));
     assert(std::isfinite(b));
@@ -108,7 +108,7 @@ bool zeroEqual(const double n)
     return !sign(n);
 }
 
-int getMode(int argc, const char *argv[])
+int getMode(const int argc, const char *argv[])
 {
     int retMode = ERROR_MODE;
     if (argc == 1)

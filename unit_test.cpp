@@ -63,6 +63,8 @@ void testFromFile()
 int testFromFileQuadratic()
 {
     FILE *fin = fopen(TEST_DIR "quadratic_tests.txt", "r");
+    if (fin == NULL)
+        return 0;
     double a = NAN, b = NAN, c = NAN;
     double ans1 = NAN, ans2 = NAN;
     int count = 0, testCount = 0;
@@ -70,7 +72,11 @@ int testFromFileQuadratic()
     fscanf(fin, "%d", &testCount);
     for (int i = 0; i < testCount; ++i)
     {
-        fscanf(fin, "%lf %lf %lf %d %lf %lf", &a, &b, &c, &count, &ans1, &ans2);
+        if (fscanf(fin, "%lf %lf %lf %d %lf %lf", &a, &b, &c, &count, &ans1, &ans2) == EOF)
+        {
+            printf("\x1b[31mQuadratic tests - error in reading file\n\x1b[0m");
+            return res;
+        }
         res += testQuadraticManual(a, b, c, count, ans1, ans2);
     }
     fclose(fin);
@@ -80,6 +86,8 @@ int testFromFileQuadratic()
 int testFromFileLinear()
 {
     FILE *fin = fopen(TEST_DIR "linear_tests.txt", "r");
+    if (fin == NULL)
+        return 0;
     double a = NAN, b = NAN;
     double ans = NAN;
     int count = 0, testCount = 0;
@@ -87,7 +95,10 @@ int testFromFileLinear()
     fscanf(fin, "%d", &testCount);
     for (int i = 0; i < testCount; ++i)
     {
-        fscanf(fin, "%lf %lf %d %lf", &a, &b, &count, &ans);
+        if(fscanf(fin, "%lf %lf %d %lf", &a, &b, &count, &ans) == EOF) {
+            printf("\x1b[31mLinears tests - file reading error\n\x1b[0m");
+            return res;
+        }
         res += testLinearManual(a, b, count, ans);
     }
     fclose(fin);
@@ -97,6 +108,8 @@ int testFromFileLinear()
 int testFromFileSign()
 {
     FILE *fin = fopen(TEST_DIR "sign_tests.txt", "r");
+    if (fin == NULL)
+        return 0;
     double n = NAN;
     int ans = 0;
     int testCount = 0;
@@ -104,7 +117,11 @@ int testFromFileSign()
     fscanf(fin, "%d", &testCount);
     for (int i = 0; i < testCount; ++i)
     {
-        fscanf(fin, "%lf %d", &n, &ans);
+        if (fscanf(fin, "%lf %d", &n, &ans) == EOF)
+        {
+            printf("\x1b[31mSign tests - file reading error\n\x1b[0m");
+            return res;
+        }
         res += testSignManual(n, ans);
     }
     fclose(fin);
@@ -114,6 +131,8 @@ int testFromFileSign()
 int testFromFileZeroEqual()
 {
     FILE *fin = fopen(TEST_DIR "zero_equal_tests.txt", "r");
+    if (fin == NULL)
+        return 0;
     double n = NAN;
     int ans = 0;
     int testCount = 0;
@@ -121,7 +140,11 @@ int testFromFileZeroEqual()
     fscanf(fin, "%d", &testCount);
     for (int i = 0; i < testCount; ++i)
     {
-        fscanf(fin, "%lf %d", &n, &ans);
+        if (fscanf(fin, "%lf %d", &n, &ans) == EOF)
+        {
+            printf("\x1b[31mZero equal tests - file reading error\n\x1b[0m");
+            return res;
+        }
         res += testZeroEqualManual(n, ans);
     }
     fclose(fin);
@@ -131,6 +154,8 @@ int testFromFileZeroEqual()
 int testFromFileEqual()
 {
     FILE *fin = fopen(TEST_DIR "equal_tests.txt", "r");
+    if (fin == NULL)
+        return 0;
     double a = NAN, b = NAN;
     int ans = 0;
     int testCount = 0;
@@ -138,7 +163,11 @@ int testFromFileEqual()
     fscanf(fin, "%d", &testCount);
     for (int i = 0; i < testCount; ++i)
     {
-        fscanf(fin, "%lf %lf %d", &a, &b, &ans);
+        if (fscanf(fin, "%lf %lf %d", &a, &b, &ans) == EOF)
+        {
+            printf("\x1b[31mEqual tests - file reading error\n\x1b[0m");
+            return res;
+        }
         res += testEqualManual(a, b, ans);
     }
     fclose(fin);
@@ -177,8 +206,7 @@ void testLinearAssert(const double a, const double b, const int ansCount, const 
     printf("\x1b[31mTEST #%d - a = %lf, b = \t%lf\n"
             "FAILED: count of roots = %d, x = %lf\n"
             "EXPECTED: count of roots = %d, x = %lf\n\x1b[0m",
-            countOfTests,
-            a, b,
+            countOfTests, a, b,
             count,    x,
             ansCount, ans);
 }

@@ -51,7 +51,7 @@ void run();
  *
  * \return RUN_MODE, TEST_FORCE_MODE or TEST_FILE_MODE in right case else ERROR_MODE
  */
-int getMode(int argc, const char *argv[]);
+int getMode(const int argc, const char *argv[]);
 
 /*!
  * Solve quadratic equation
@@ -64,7 +64,7 @@ int getMode(int argc, const char *argv[]);
  * 
  * \return Count of solutions
  */
-int  solveSquare(double a, double b, double c, double * const x1, double * const x2);
+int  solveSquare(const double a, const double b, const double c, double * const x1, double * const x2);
 
 /*!
  * Solve linear equation
@@ -75,28 +75,28 @@ int  solveSquare(double a, double b, double c, double * const x1, double * const
  *
  * \return Count of solutions
  */
-int  solveLinear(double a, double b, double *x);
+int  solveLinear(const double a, const double b, double * const x);
 
 /*!
  * Checks two numbers for equality taking into account the error
  *
  * \return true if equal else false
  */
-bool equal(double a, double b);
+bool equal(const double a, const double b);
 
 /*!
  * Checks if the number is equal to zero taking into account the error
  *
  * \return true if zero, else false
  */
-bool zeroEqual(double n);
+bool zeroEqual(const double n);
 
 /*!
  * Return sign of number taking into account the error
  *
  * \return -1 if negative, 0 if zero, 1 if positive
  */
-int  sign(double n);
+int  sign(const double n);
 
 /*!
  * Clear buffer of stdin
