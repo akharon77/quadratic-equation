@@ -3,6 +3,8 @@
 #include <math.h>
 #include <stdio.h>
 
+#define TEST_DIR "./tests/"
+
 int countOfTests = 0;
 
 void testForce()
@@ -60,7 +62,7 @@ void testFromFile()
 
 int testFromFileQuadratic()
 {
-    FILE *fin = fopen("quadratic_tests.txt", "r");
+    FILE *fin = fopen(TEST_DIR "quadratic_tests.txt", "r");
     double a = NAN, b = NAN, c = NAN;
     double ans1 = NAN, ans2 = NAN;
     int count = 0, testCount = 0;
@@ -77,7 +79,7 @@ int testFromFileQuadratic()
 
 int testFromFileLinear()
 {
-    FILE *fin = fopen("linear_tests.txt", "r");
+    FILE *fin = fopen(TEST_DIR "linear_tests.txt", "r");
     double a = NAN, b = NAN;
     double ans = NAN;
     int count = 0, testCount = 0;
@@ -94,7 +96,7 @@ int testFromFileLinear()
 
 int testFromFileSign()
 {
-    FILE *fin = fopen("sign_tests.txt", "r");
+    FILE *fin = fopen(TEST_DIR "sign_tests.txt", "r");
     double n = NAN;
     int ans = 0;
     int testCount = 0;
@@ -111,7 +113,7 @@ int testFromFileSign()
 
 int testFromFileZeroEqual()
 {
-    FILE *fin = fopen("zero_equal_tests.txt", "r");
+    FILE *fin = fopen(TEST_DIR "zero_equal_tests.txt", "r");
     double n = NAN;
     int ans = 0;
     int testCount = 0;
@@ -128,7 +130,7 @@ int testFromFileZeroEqual()
 
 int testFromFileEqual()
 {
-    FILE *fin = fopen("equal_tests.txt", "r");
+    FILE *fin = fopen(TEST_DIR "equal_tests.txt", "r");
     double a = NAN, b = NAN;
     int ans = 0;
     int testCount = 0;
