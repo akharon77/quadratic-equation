@@ -3,6 +3,14 @@
 
 #include "colors.h"
 
+#define ASSERT(expr)                                        \
+    if (!(expr))                                            \
+        printf("Assertion failed. Expression: " #expr "\n"  \
+                "File: %s, line: %d\n"                      \
+                "Function: %s",                             \
+                __FILE__, __LINE__,                         \
+                __PRETTY_FUNCTION__);
+
 const double EPS = 1e-6;
 
 /*! Count of solutions of equations

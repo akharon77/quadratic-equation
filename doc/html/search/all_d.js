@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['zero_5fsolutions_60',['ZERO_SOLUTIONS',['../equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a6de99e6dad771f82cf67ae1691db9417',1,'equations.h']]],
-  ['zeroequal_61',['zeroEqual',['../equations_8cpp.html#ad58d29b2dc76e820eb2d8a73e99134b8',1,'zeroEqual(const double n):&#160;equations.cpp'],['../equations_8h.html#ad58d29b2dc76e820eb2d8a73e99134b8',1,'zeroEqual(const double n):&#160;equations.cpp']]]
+  ['sign_41',['sign',['../equations_8cpp.html#aebe92b2c47d6de1d8cf6dbf38aa99a95',1,'sign(const double n):&#160;equations.cpp'],['../equations_8h.html#aebe92b2c47d6de1d8cf6dbf38aa99a95',1,'sign(const double n):&#160;equations.cpp']]],
+  ['solutions_42',['SOLUTIONS',['../equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168',1,'equations.h']]],
+  ['solvelinear_43',['solveLinear',['../equations_8cpp.html#af2005fa6cf1faa7b20918f5c5ae24086',1,'solveLinear(const double a, const double b, double *const x):&#160;equations.cpp'],['../equations_8h.html#af2005fa6cf1faa7b20918f5c5ae24086',1,'solveLinear(const double a, const double b, double *const x):&#160;equations.cpp']]],
+  ['solvesquare_44',['solveSquare',['../equations_8cpp.html#ae9de8abe76b6c8d7ac1ef2ab47998384',1,'solveSquare(const double a, const double b, const double c, double *const x1, double *const x2):&#160;equations.cpp'],['../equations_8h.html#ae9de8abe76b6c8d7ac1ef2ab47998384',1,'solveSquare(const double a, const double b, const double c, double *const x1, double *const x2):&#160;equations.cpp']]],
+  ['strform_45',['strForm',['../struct_m_o_d_e.html#ab25a8fd4373ad5759deb1af5da836fb3',1,'MODE']]]
 ];

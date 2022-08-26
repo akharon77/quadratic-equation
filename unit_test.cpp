@@ -11,19 +11,19 @@ int countOfTests = 0;
 void testForce()
 {
     int countTestsDone =
-          testQuadraticManual( 1,  1,  1, ZERO_SOLUTIONS, NAN,    NAN)
-        + testQuadraticManual( 1,  0,  1, ZERO_SOLUTIONS, NAN,    NAN)
-        + testQuadraticManual(-1, -1,  0, TWO_SOLUTIONS,  -1,     0  )
-        + testQuadraticManual( 1,  2,  1, ONE_SOLUTION,   -1,     NAN)
-        + testQuadraticManual( 0,  0,  0, INF_SOLUTIONS,  NAN,    NAN)
-        + testQuadraticManual( 0,  1,  2, ONE_SOLUTION,   -2,     NAN)
-        + testQuadraticManual( 0,  5,  2, ONE_SOLUTION,   -0.4,   NAN)
-        + testQuadraticManual( 0,  0,  1, ZERO_SOLUTIONS, NAN,    NAN)
+          testQuadraticManual({ 1,  1,  1, ZERO_SOLUTIONS, NAN,    NAN})
+        + testQuadraticManual({ 1,  0,  1, ZERO_SOLUTIONS, NAN,    NAN})
+        + testQuadraticManual({-1, -1,  0, TWO_SOLUTIONS,  -1,     0  })
+        + testQuadraticManual({ 1,  2,  1, ONE_SOLUTION,   -1,     NAN})
+        + testQuadraticManual({ 0,  0,  0, INF_SOLUTIONS,  NAN,    NAN})
+        + testQuadraticManual({ 0,  1,  2, ONE_SOLUTION,   -2,     NAN})
+        + testQuadraticManual({ 0,  5,  2, ONE_SOLUTION,   -0.4,   NAN})
+        + testQuadraticManual({ 0,  0,  1, ZERO_SOLUTIONS, NAN,    NAN})
 
-        + testLinearManual   ( 0,  0,     INF_SOLUTIONS,  NAN        )
-        + testLinearManual   ( 1,  1,     ONE_SOLUTION,   -1         )
-        + testLinearManual   (-1,  2,     ONE_SOLUTION,   2          )
-        + testLinearManual   ( 0,  1,     ZERO_SOLUTIONS, NAN        )
+        + testLinearManual   ({ 0,  0,     INF_SOLUTIONS,  NAN        })
+        + testLinearManual   ({ 1,  1,     ONE_SOLUTION,   -1         })
+        + testLinearManual   ({-1,  2,     ONE_SOLUTION,   2          })
+        + testLinearManual   ({ 0,  1,     ZERO_SOLUTIONS, NAN        })
 
         + testSignManual(    4.4,  1)
         + testSignManual(   -4.5, -1)
@@ -66,20 +66,19 @@ int testFromFileQuadratic()
     FILE *fin = fopen(TEST_DIR "quadratic_tests.txt", "r");
     if (fin == NULL)
         return 0;
-    double a = NAN, b = NAN, c = NAN;
-    double ans1 = NAN, ans2 = NAN;
-    int count = 0, testCount = 0;
+    quadraticTest test;
+    int testCount = 0;
     int res = 0;
     if (fscanf(fin, "%d", &testCount) == EOF)
         return 0;
     for (int i = 0; i < testCount; ++i)
     {
-        if (fscanf(fin, "%lf %lf %lf %d %lf %lf", &a, &b, &c, &count, &ans1, &ans2) == EOF)
+        if (fscanf(fin, "%lf %lf %lf %d %lf %lf", &test.a, &test.b, &test.c, &test.ansCount, &test.ans1, &test.ans2) == EOF)
         {
             printf(RED "Quadratic tests - error in reading file\n" NORMAL);
             return res;
         }
-        res += testQuadraticManual(a, b, c, count, ans1, ans2);
+        res += testQuadraticManual(test);
     }
     fclose(fin);
     return res;
@@ -90,19 +89,18 @@ int testFromFileLinear()
     FILE *fin = fopen(TEST_DIR "linear_tests.txt", "r");
     if (fin == NULL)
         return 0;
-    double a = NAN, b = NAN;
-    double ans = NAN;
-    int count = 0, testCount = 0;
+    linearTest test;
+    int testCount = 0;
     int res = 0;
     if (fscanf(fin, "%d", &testCount) == EOF)
         return 0;
     for (int i = 0; i < testCount; ++i)
     {
-        if(fscanf(fin, "%lf %lf %d %lf", &a, &b, &count, &ans) == EOF) {
+        if(fscanf(fin, "%lf %lf %d %lf", &test.a, &test.b, &test.ansCount, &test.ans) == EOF) {
             printf(RED "Linears tests - file reading error\n" NORMAL);
             return res;
         }
-        res += testLinearManual(a, b, count, ans);
+        res += testLinearManual(test);
     }
     fclose(fin);
     return res;
@@ -179,8 +177,12 @@ int testFromFileEqual()
     fclose(fin);
     return res;
 }
-void testQuadraticAssert(const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2, const int count, const double x1, const double x2)
+void testQuadraticAssert(const quadraticTest test, const int count, const double x1, const double x2)
+// void testQuadraticAssert(const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2, const int count, const double x1, const double x2)
 {
+    double a = test.a, b = test.b, c = test.c;
+    double ans1 = test.ans1, ans2 = test.ans2;
+    int ansCount = test.ansCount;
     printf(RED "TEST #%d - a = \t%lf, b = \t%lf, c = \t%lf\n"
             "FAILED: count of roots = %d, x1 = %lf, x2 = %lf\n"
             "EXPECTED: count of roots = %d, x1 = %lf, x2 = %lf\n" NORMAL,
@@ -189,25 +191,33 @@ void testQuadraticAssert(const double a, const double b, const double c, const i
             ansCount, ans1, ans2);
 }
 
-int testQuadraticManual(const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2)
+int testQuadraticManual(const quadraticTest test)
+// int testQuadraticManual(const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2)
 {
     ++countOfTests;
     double x1 = NAN, x2 = NAN;
+    double a = test.a, b = test.b, c = test.c;
+    double ans1 = test.ans1, ans2 = test.ans2;
+    int ansCount = test.ansCount;
     int nSolutions = solveSquare(a, b, c, &x1, &x2);
     if (ansCount != nSolutions                                                  ||
         (ansCount == ZERO_SOLUTIONS && !(std::isnan(x1) && std::isnan(x2)))     ||
         (ansCount == ONE_SOLUTION && !(equal(x1, ans1) && std::isnan(x2)))      ||
         (ansCount == TWO_SOLUTIONS && !(equal(x1, ans1) && equal(x2, ans2))))
     {
-        testQuadraticAssert(a, b, c, ansCount, ans1, ans2, nSolutions, x1, x2);
+        testQuadraticAssert(test, nSolutions, x1, x2);
         return 0;
     }
     testDone();
     return 1;
 }
 
-void testLinearAssert(const double a, const double b, const int ansCount, const double ans, const int count, const double x)
+void testLinearAssert(const linearTest test, const int count, const double x)
+// void testLinearAssert(const double a, const double b, const int ansCount, const double ans, const int count, const double x)
 {
+    double a = test.a, b = test.b;
+    double ans = test.ans;
+    int ansCount = test.ansCount;
     printf(RED "TEST #%d - a = %lf, b = \t%lf\n"
             "FAILED: count of roots = %d, x = %lf\n"
             "EXPECTED: count of roots = %d, x = %lf\n" NORMAL,
@@ -216,8 +226,12 @@ void testLinearAssert(const double a, const double b, const int ansCount, const 
             ansCount, ans);
 }
 
-int testLinearManual(const double a, const double b, const int ansCount, const double ans)
+int testLinearManual(const linearTest test)
+// int testLinearManual(const double a, const double b, const int ansCount, const double ans)
 {
+    double a = test.a, b = test.b;
+    double ans = test.ans;
+    int ansCount = test.ansCount;
     ++countOfTests;
     double x = NAN;
     int nSolutions = solveLinear(a, b, &x);
@@ -225,7 +239,7 @@ int testLinearManual(const double a, const double b, const int ansCount, const d
         (ansCount == ZERO_SOLUTIONS && !std::isnan(x))      ||
         (ansCount == ONE_SOLUTION && !equal(x, ans)))
     {
-        testLinearAssert(a, b, ansCount, ans, nSolutions, x);
+        testLinearAssert(test, nSolutions, x);
         return 0;
     }
     testDone();

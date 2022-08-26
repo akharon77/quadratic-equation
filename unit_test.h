@@ -1,11 +1,25 @@
 #ifndef UNIT_TESTH
 #define UNIT_TESTH
 
-void testQuadraticAssert(double a, double b, double c, int ansCount, double ans1, double ans2, int count, double x1, double x2);
-int testQuadraticManual(double a, double b, double c, int ansCount, double ans1, double ans2);
+#include <math.h>
 
-void testLinearAssert(const double a, const double b, const int ansCount, const double ans, const int count, const double x);
-int testLinearManual(const double a, const double b, const int ansCount, const double ans);
+struct quadraticTest {
+    double a = NAN, b = NAN, c = NAN;
+    int ansCount = 0;
+    double ans1 = NAN, ans2 = NAN;
+};
+
+struct linearTest {
+    double a = NAN, b = NAN;
+    int ansCount = 0;
+    double ans = NAN;
+};
+
+void testQuadraticAssert(const quadraticTest test, const int count, const double x1, const double x2);
+int testQuadraticManual(const quadraticTest test);
+
+void testLinearAssert(const linearTest test, const int count, const double x);
+int testLinearManual(const linearTest test);
 
 void testNumAndResAssert(const double n, const int ans, const int res);
 int testZeroEqualManual(const double n, const bool ans);

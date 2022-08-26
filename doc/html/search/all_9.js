@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['readme_26',['README',['../md__home_timurabdullin_projects_quadratic_equation__r_e_a_d_m_e.html',1,'']]],
-  ['readme_2emd_27',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['red_28',['RED',['../colors_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'colors.h']]],
-  ['run_29',['run',['../equations_8h.html#a13a43e6d814de94978c515cb084873b1',1,'run():&#160;main.cpp'],['../main_8cpp.html#a13a43e6d814de94978c515cb084873b1',1,'run():&#160;main.cpp']]],
-  ['run_5fmode_30',['RUN_MODE',['../equations_8h.html#a847555108290b8c30e6cdff1eb9ae759adbef8108cc9b9ff34b003ebbd5690173',1,'equations.h']]]
+  ['one_5fsolution_32',['ONE_SOLUTION',['../equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168a0451cd6d5aa789cdc383e452dd2c0bd7',1,'equations.h']]],
+  ['output_33',['output',['../equations_8cpp.html#a0bcd622bc0ce0ec71e23ab22d4d0ad85',1,'output(const int count, const double x1, const double x2):&#160;equations.cpp'],['../equations_8h.html#a0bcd622bc0ce0ec71e23ab22d4d0ad85',1,'output(const int count, const double x1, const double x2):&#160;equations.cpp']]]
 ];

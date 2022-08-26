@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['clear_5finput_1',['clear_input',['../equations_8cpp.html#a30c686b3c9e1ceb9464ae08218b731b0',1,'clear_input():&#160;equations.cpp'],['../equations_8h.html#a30c686b3c9e1ceb9464ae08218b731b0',1,'clear_input():&#160;equations.cpp']]],
-  ['colors_2eh_2',['colors.h',['../colors_8h.html',1,'']]],
-  ['countoftests_3',['countOfTests',['../unit__test_8cpp.html#a164b908567040cd633c27411f922556d',1,'unit_test.cpp']]]
+  ['b_6',['b',['../structquadratic_test.html#a0d680d8c0cac73dcb1109089ba5de9cc',1,'quadraticTest::b()'],['../structlinear_test.html#a99ee1c6e206d27260c72bd49200d3436',1,'linearTest::b()']]],
+  ['bold_7',['BOLD',['../colors_8h.html#a26cdbb1a00213c810caccf21cd33a631',1,'colors.h']]]
 ];

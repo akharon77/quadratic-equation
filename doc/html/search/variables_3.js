@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nmodes_105',['NMODES',['../equations_8h.html#acdd7a5cfec341d2d5ce20f0f48e29bc8',1,'equations.h']]]
+  ['eps_121',['EPS',['../equations_8h.html#afe01386a82fedc016455a43c20280a97',1,'equations.h']]]
 ];

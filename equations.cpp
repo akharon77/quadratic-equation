@@ -1,18 +1,17 @@
 #include "equations.h"
-#include <assert.h>
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
 
 int solveSquare(const double a, const double b, const double c, double * const x1, double * const x2)
 {
-    assert(isfinite(a));
-    assert(isfinite(b));
-    assert(isfinite(c));
+    ASSERT(isfinite(a));
+    ASSERT(isfinite(b));
+    ASSERT(isfinite(c));
 
-    assert(x1 != NULL);
-    assert(x2 != NULL);
-    assert(x1 != x2);
+    ASSERT(x1 != NULL);
+    ASSERT(x2 != NULL);
+    ASSERT(x1 != x2);
 
     *x1 = *x2 = NAN;
 
@@ -53,10 +52,10 @@ int solveSquare(const double a, const double b, const double c, double * const x
 
 int solveLinear(const double a, const double b, double * const x)
 {
-    assert(isfinite(a));
-    assert(isfinite(b));
+    ASSERT(isfinite(a));
+    ASSERT(isfinite(b));
 
-    assert(x != NULL);
+    ASSERT(x != NULL);
 
     *x = NAN;
 
@@ -89,7 +88,7 @@ bool clear_input()
 
 int sign(const double n)
 {
-    assert(isfinite(n));
+    ASSERT(isfinite(n));
 
     if (n < -EPS)
         return -1;

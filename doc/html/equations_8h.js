@@ -1,6 +1,7 @@
 var equations_8h =
 [
     [ "MODE", "struct_m_o_d_e.html", "struct_m_o_d_e" ],
+    [ "ASSERT", "equations_8h.html#a28301f76c53b643912da7c538f74e2c6", null ],
     [ "PROGRAM_MODES", "equations_8h.html#a847555108290b8c30e6cdff1eb9ae759", [
       [ "TEST_FORCE_MODE", "equations_8h.html#a847555108290b8c30e6cdff1eb9ae759ac8fd434b0eda14b2b809677a46531f15", null ],
       [ "TEST_FILE_MODE", "equations_8h.html#a847555108290b8c30e6cdff1eb9ae759af89d1d5f3e974183801505ad4e51a19e", null ],

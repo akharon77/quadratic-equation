@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['program_5fmodes_25',['PROGRAM_MODES',['../equations_8h.html#a847555108290b8c30e6cdff1eb9ae759',1,'equations.h']]]
+  ['nmodes_30',['NMODES',['../equations_8h.html#acdd7a5cfec341d2d5ce20f0f48e29bc8',1,'equations.h']]],
+  ['normal_31',['NORMAL',['../colors_8h.html#a1291f416b069313021b519eea62d5bf1',1,'colors.h']]]
 ];
