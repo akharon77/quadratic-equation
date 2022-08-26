@@ -1,5 +1,6 @@
 #include "equations.h"
 #include "unit_test.h"
+#include "colors.h"
 #include <math.h>
 #include <stdio.h>
 
@@ -45,7 +46,7 @@ void testForce()
         + testEqualManual(     1,     1, 1)
         + testEqualManual(    -1,    -1, 1);
 
-    printf("\x1b[1m%d tests done\n\x1b[0m", countTestsDone);
+    printf(BOLD "%d tests done\n" NORMAL, countTestsDone);
 }
 
 void testFromFile()
@@ -57,7 +58,7 @@ void testFromFile()
         + testFromFileZeroEqual()
         + testFromFileEqual();
 
-    printf("\x1b[1m%d tests done\n\x1b[0m", countTestsDone);
+    printf(BOLD "%d tests done\n" NORMAL, countTestsDone);
 }
 
 int testFromFileQuadratic()
@@ -69,12 +70,13 @@ int testFromFileQuadratic()
     double ans1 = NAN, ans2 = NAN;
     int count = 0, testCount = 0;
     int res = 0;
-    fscanf(fin, "%d", &testCount);
+    if (fscanf(fin, "%d", &testCount) == EOF)
+        return 0;
     for (int i = 0; i < testCount; ++i)
     {
         if (fscanf(fin, "%lf %lf %lf %d %lf %lf", &a, &b, &c, &count, &ans1, &ans2) == EOF)
         {
-            printf("\x1b[31mQuadratic tests - error in reading file\n\x1b[0m");
+            printf(RED "Quadratic tests - error in reading file\n" NORMAL);
             return res;
         }
         res += testQuadraticManual(a, b, c, count, ans1, ans2);
@@ -92,11 +94,12 @@ int testFromFileLinear()
     double ans = NAN;
     int count = 0, testCount = 0;
     int res = 0;
-    fscanf(fin, "%d", &testCount);
+    if (fscanf(fin, "%d", &testCount) == EOF)
+        return 0;
     for (int i = 0; i < testCount; ++i)
     {
         if(fscanf(fin, "%lf %lf %d %lf", &a, &b, &count, &ans) == EOF) {
-            printf("\x1b[31mLinears tests - file reading error\n\x1b[0m");
+            printf(RED "Linears tests - file reading error\n" NORMAL);
             return res;
         }
         res += testLinearManual(a, b, count, ans);
@@ -114,12 +117,13 @@ int testFromFileSign()
     int ans = 0;
     int testCount = 0;
     int res = 0;
-    fscanf(fin, "%d", &testCount);
+    if (fscanf(fin, "%d", &testCount) == EOF)
+        return 0;
     for (int i = 0; i < testCount; ++i)
     {
         if (fscanf(fin, "%lf %d", &n, &ans) == EOF)
         {
-            printf("\x1b[31mSign tests - file reading error\n\x1b[0m");
+            printf(RED "Sign tests - file reading error\n" NORMAL);
             return res;
         }
         res += testSignManual(n, ans);
@@ -137,12 +141,13 @@ int testFromFileZeroEqual()
     int ans = 0;
     int testCount = 0;
     int res = 0;
-    fscanf(fin, "%d", &testCount);
+    if (fscanf(fin, "%d", &testCount) == EOF)
+        return 0;
     for (int i = 0; i < testCount; ++i)
     {
         if (fscanf(fin, "%lf %d", &n, &ans) == EOF)
         {
-            printf("\x1b[31mZero equal tests - file reading error\n\x1b[0m");
+            printf(RED "Zero equal tests - file reading error\n" NORMAL);
             return res;
         }
         res += testZeroEqualManual(n, ans);
@@ -160,12 +165,13 @@ int testFromFileEqual()
     int ans = 0;
     int testCount = 0;
     int res = 0;
-    fscanf(fin, "%d", &testCount);
+    if (fscanf(fin, "%d", &testCount) == EOF)
+        return 0;
     for (int i = 0; i < testCount; ++i)
     {
         if (fscanf(fin, "%lf %lf %d", &a, &b, &ans) == EOF)
         {
-            printf("\x1b[31mEqual tests - file reading error\n\x1b[0m");
+            printf(RED "Equal tests - file reading error\n" NORMAL);
             return res;
         }
         res += testEqualManual(a, b, ans);
@@ -175,11 +181,10 @@ int testFromFileEqual()
 }
 void testQuadraticAssert(const double a, const double b, const double c, const int ansCount, const double ans1, const double ans2, const int count, const double x1, const double x2)
 {
-    printf("\x1b[31mTEST #%d - a = \t%lf, b = \t%lf, c = \t%lf\n"
+    printf(RED "TEST #%d - a = \t%lf, b = \t%lf, c = \t%lf\n"
             "FAILED: count of roots = %d, x1 = %lf, x2 = %lf\n"
-            "EXPECTED: count of roots = %d, x1 = %lf, x2 = %lf\n\x1b[0m",
-            countOfTests,
-            a, b, c,
+            "EXPECTED: count of roots = %d, x1 = %lf, x2 = %lf\n" NORMAL,
+            countOfTests, a, b, c,
             count,    x1,   x2,
             ansCount, ans1, ans2);
 }
@@ -203,9 +208,9 @@ int testQuadraticManual(const double a, const double b, const double c, const in
 
 void testLinearAssert(const double a, const double b, const int ansCount, const double ans, const int count, const double x)
 {
-    printf("\x1b[31mTEST #%d - a = %lf, b = \t%lf\n"
+    printf(RED "TEST #%d - a = %lf, b = \t%lf\n"
             "FAILED: count of roots = %d, x = %lf\n"
-            "EXPECTED: count of roots = %d, x = %lf\n\x1b[0m",
+            "EXPECTED: count of roots = %d, x = %lf\n" NORMAL,
             countOfTests, a, b,
             count,    x,
             ansCount, ans);
@@ -229,11 +234,10 @@ int testLinearManual(const double a, const double b, const int ansCount, const d
 
 void testNumAndResAssert(const double n, const int ans, const int res)
 {
-    printf("\x1b[31mTEST #%d - n = %lf\n"
+    printf(RED "TEST #%d - n = %lf\n"
             "FAILED: ans = %d\n"
-            "EXPECTED: ans = %d\n\x1b[0m",
-            countOfTests,
-            n,
+            "EXPECTED: ans = %d\n" NORMAL,
+            countOfTests, n,
             res, ans);
 }
 
@@ -265,11 +269,10 @@ int testZeroEqualManual(const double n, const bool ans)
 
 void testEqualAssert(const double a, const double b, const bool ans, const bool res)
 {
-    printf("\x1b[31mTEST #%d - a = %lf, b = %lf\t\n"
+    printf(RED "TEST #%d - a = %lf, b = %lf\t\n"
             "FAILED: ans = %d\n"
-            "EXPECTED: ans = %d\n\x1b[0m",
-            countOfTests,
-            a, b,
+            "EXPECTED: ans = %d\n" NORMAL,
+            countOfTests, a, b,
             res, ans);
 }
 
@@ -288,5 +291,5 @@ int testEqualManual(const double a, const double b, const bool ans)
 
 void testDone()
 {
-    printf("\x1b[32mTEST #%d \t- DONE\n\x1b[0m", countOfTests);
+    printf(GREEN "TEST #%d \t- DONE\n" NORMAL, countOfTests);
 }

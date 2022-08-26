@@ -110,6 +110,10 @@ Functions</h2></td></tr>
 <tr class="separator:ad58d29b2dc76e820eb2d8a73e99134b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a999342a208f33693d67977dda182e291"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a999342a208f33693d67977dda182e291">getMode</a> (const int argc, const char *argv[])</td></tr>
 <tr class="separator:a999342a208f33693d67977dda182e291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf24254064c036590e4bd689e9e94f66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#acf24254064c036590e4bd689e9e94f66">input</a> (double *const a, double *const b, double *const c)</td></tr>
+<tr class="separator:acf24254064c036590e4bd689e9e94f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bcd622bc0ce0ec71e23ab22d4d0ad85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8cpp.html#a0bcd622bc0ce0ec71e23ab22d4d0ad85">output</a> (const int count, const double x1, const double x2)</td></tr>
+<tr class="separator:a0bcd622bc0ce0ec71e23ab22d4d0ad85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a30c686b3c9e1ceb9464ae08218b731b0"></a>
@@ -188,6 +192,92 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Shows mode for program</p>
 <dl class="section return"><dt>Returns</dt><dd>RUN_MODE, TEST_FORCE_MODE or TEST_FILE_MODE in right case else ERROR_MODE </dd></dl>
+
+</div>
+</div>
+<a id="acf24254064c036590e4bd689e9e94f66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf24254064c036590e4bd689e9e94f66">&#9670;&nbsp;</a></span>input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void input </td>
+          <td>(</td>
+          <td class="paramtype">double *const&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *const&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *const&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Perfoms input</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Coefficient of x^2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Coefficient of x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Free term </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0bcd622bc0ce0ec71e23ab22d4d0ad85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bcd622bc0ce0ec71e23ab22d4d0ad85">&#9670;&nbsp;</a></span>output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void output </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>x2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Perfoms output</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>Count of roots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>First root if exists </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>Second root if exists </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

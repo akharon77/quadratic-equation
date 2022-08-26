@@ -91,7 +91,8 @@ $(document).ready(function(){initNavTree('equations_8h.html',''); initResizable(
 <div class="title">/home/timurabdullin/projects/quadratic_equation/equations.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &quot;<a class="el" href="colors_8h_source.html">colors.h</a>&quot;</code><br />
+</div>
 <p><a href="equations_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -140,6 +141,10 @@ Functions</h2></td></tr>
 <tr class="separator:aebe92b2c47d6de1d8cf6dbf38aa99a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30c686b3c9e1ceb9464ae08218b731b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a30c686b3c9e1ceb9464ae08218b731b0">clear_input</a> ()</td></tr>
 <tr class="separator:a30c686b3c9e1ceb9464ae08218b731b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf24254064c036590e4bd689e9e94f66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#acf24254064c036590e4bd689e9e94f66">input</a> (double *const a, double *const b, double *const c)</td></tr>
+<tr class="separator:acf24254064c036590e4bd689e9e94f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bcd622bc0ce0ec71e23ab22d4d0ad85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="equations_8h.html#a0bcd622bc0ce0ec71e23ab22d4d0ad85">output</a> (const int count, const double x1, const double x2)</td></tr>
+<tr class="separator:a0bcd622bc0ce0ec71e23ab22d4d0ad85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -162,6 +167,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Modes of program </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a847555108290b8c30e6cdff1eb9ae759ac8fd434b0eda14b2b809677a46531f15"></a>TEST_FORCE_MODE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a847555108290b8c30e6cdff1eb9ae759af89d1d5f3e974183801505ad4e51a19e"></a>TEST_FILE_MODE&#160;</td><td class="fielddoc"></td></tr>
@@ -182,6 +188,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Count of solutions of equations </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aad6d6c64a88e64f99c12e5c5b62be168a6de99e6dad771f82cf67ae1691db9417"></a>ZERO_SOLUTIONS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aad6d6c64a88e64f99c12e5c5b62be168a0451cd6d5aa789cdc383e452dd2c0bd7"></a>ONE_SOLUTION&#160;</td><td class="fielddoc"></td></tr>
@@ -269,6 +276,92 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Shows mode for program</p>
 <dl class="section return"><dt>Returns</dt><dd>RUN_MODE, TEST_FORCE_MODE or TEST_FILE_MODE in right case else ERROR_MODE </dd></dl>
+
+</div>
+</div>
+<a id="acf24254064c036590e4bd689e9e94f66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf24254064c036590e4bd689e9e94f66">&#9670;&nbsp;</a></span>input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void input </td>
+          <td>(</td>
+          <td class="paramtype">double *const&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *const&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *const&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Perfoms input</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>Coefficient of x^2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Coefficient of x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>Free term </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0bcd622bc0ce0ec71e23ab22d4d0ad85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bcd622bc0ce0ec71e23ab22d4d0ad85">&#9670;&nbsp;</a></span>output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void output </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>x2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Perfoms output</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>Count of roots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>First root if exists </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>Second root if exists </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -500,9 +593,9 @@ Variables</h2></td></tr>
 <div class="line">        {<span class="stringliteral">&quot;--test-file&quot;</span>,  <a class="code" href="equations_8h.html#a847555108290b8c30e6cdff1eb9ae759af89d1d5f3e974183801505ad4e51a19e">TEST_FILE_MODE</a>},</div>
 <div class="line">        {<span class="stringliteral">&quot;--run&quot;</span>,        <a class="code" href="equations_8h.html#a847555108290b8c30e6cdff1eb9ae759adbef8108cc9b9ff34b003ebbd5690173">RUN_MODE</a>}</div>
 <div class="line">    }</div>
-<div class="ttc" id="aequations_8h_html_a847555108290b8c30e6cdff1eb9ae759ac8fd434b0eda14b2b809677a46531f15"><div class="ttname"><a href="equations_8h.html#a847555108290b8c30e6cdff1eb9ae759ac8fd434b0eda14b2b809677a46531f15">TEST_FORCE_MODE</a></div><div class="ttdeci">@ TEST_FORCE_MODE</div><div class="ttdef"><b>Definition:</b> equations.h:16</div></div>
-<div class="ttc" id="aequations_8h_html_a847555108290b8c30e6cdff1eb9ae759adbef8108cc9b9ff34b003ebbd5690173"><div class="ttname"><a href="equations_8h.html#a847555108290b8c30e6cdff1eb9ae759adbef8108cc9b9ff34b003ebbd5690173">RUN_MODE</a></div><div class="ttdeci">@ RUN_MODE</div><div class="ttdef"><b>Definition:</b> equations.h:18</div></div>
-<div class="ttc" id="aequations_8h_html_a847555108290b8c30e6cdff1eb9ae759af89d1d5f3e974183801505ad4e51a19e"><div class="ttname"><a href="equations_8h.html#a847555108290b8c30e6cdff1eb9ae759af89d1d5f3e974183801505ad4e51a19e">TEST_FILE_MODE</a></div><div class="ttdeci">@ TEST_FILE_MODE</div><div class="ttdef"><b>Definition:</b> equations.h:17</div></div>
+<div class="ttc" id="aequations_8h_html_a847555108290b8c30e6cdff1eb9ae759ac8fd434b0eda14b2b809677a46531f15"><div class="ttname"><a href="equations_8h.html#a847555108290b8c30e6cdff1eb9ae759ac8fd434b0eda14b2b809677a46531f15">TEST_FORCE_MODE</a></div><div class="ttdeci">@ TEST_FORCE_MODE</div><div class="ttdef"><b>Definition:</b> equations.h:23</div></div>
+<div class="ttc" id="aequations_8h_html_a847555108290b8c30e6cdff1eb9ae759adbef8108cc9b9ff34b003ebbd5690173"><div class="ttname"><a href="equations_8h.html#a847555108290b8c30e6cdff1eb9ae759adbef8108cc9b9ff34b003ebbd5690173">RUN_MODE</a></div><div class="ttdeci">@ RUN_MODE</div><div class="ttdef"><b>Definition:</b> equations.h:25</div></div>
+<div class="ttc" id="aequations_8h_html_a847555108290b8c30e6cdff1eb9ae759af89d1d5f3e974183801505ad4e51a19e"><div class="ttname"><a href="equations_8h.html#a847555108290b8c30e6cdff1eb9ae759af89d1d5f3e974183801505ad4e51a19e">TEST_FILE_MODE</a></div><div class="ttdeci">@ TEST_FILE_MODE</div><div class="ttdef"><b>Definition:</b> equations.h:24</div></div>
 </div><!-- fragment -->
 </div>
 </div>

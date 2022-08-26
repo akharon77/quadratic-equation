@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_68',['main',['../main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c',1,'main.cpp']]]
+  ['input_76',['input',['../equations_8cpp.html#acf24254064c036590e4bd689e9e94f66',1,'input(double *const a, double *const b, double *const c):&#160;equations.cpp'],['../equations_8h.html#acf24254064c036590e4bd689e9e94f66',1,'input(double *const a, double *const b, double *const c):&#160;equations.cpp']]]
 ];

@@ -6,9 +6,9 @@
 
 int solveSquare(const double a, const double b, const double c, double * const x1, double * const x2)
 {
-    assert(std::isfinite(a));
-    assert(std::isfinite(b));
-    assert(std::isfinite(c));
+    assert(isfinite(a));
+    assert(isfinite(b));
+    assert(isfinite(c));
 
     assert(x1 != NULL);
     assert(x2 != NULL);
@@ -53,8 +53,8 @@ int solveSquare(const double a, const double b, const double c, double * const x
 
 int solveLinear(const double a, const double b, double * const x)
 {
-    assert(std::isfinite(a));
-    assert(std::isfinite(b));
+    assert(isfinite(a));
+    assert(isfinite(b));
 
     assert(x != NULL);
 
@@ -89,7 +89,7 @@ bool clear_input()
 
 int sign(const double n)
 {
-    assert(std::isfinite(n));
+    assert(isfinite(n));
 
     if (n < -EPS)
         return -1;
@@ -124,4 +124,39 @@ int getMode(const int argc, const char *argv[])
                         retMode = MODES[j].modeID;
                 }
     return retMode;
+}
+
+void input(double * const a, double * const b, double * const c)
+{
+    printf("Input coefficients of quadratic equation ax^2 + bx + c = 0\n");
+    while (true)
+    {
+        int nInput = scanf("%lf %lf %lf", a, b, c);
+        bool flag = clear_input();
+        if (nInput == 3 && flag)
+            break;
+        printf("Wrong input, try again\n");
+    }
+}
+
+void output(const int count, const double x1, const double x2)
+{
+    switch (count)
+    {
+        case ZERO_SOLUTIONS: 
+            printf("No solutions");
+            break;
+        case ONE_SOLUTION:
+            printf("One solution:\n\tX = %lf", x1);
+            break;
+        case TWO_SOLUTIONS:
+            printf("Two solutions\n\tX1 = %lf,\n\tX2 = %lf", x1, x2);
+            break;
+        case INF_SOLUTIONS:
+            printf("Any number");
+            break;
+        default:
+            printf("Error");
+    }
+    printf("\n");
 }

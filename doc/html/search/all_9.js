@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['sign_24',['sign',['../equations_8cpp.html#aebe92b2c47d6de1d8cf6dbf38aa99a95',1,'sign(const double n):&#160;equations.cpp'],['../equations_8h.html#aebe92b2c47d6de1d8cf6dbf38aa99a95',1,'sign(const double n):&#160;equations.cpp']]],
-  ['solutions_25',['SOLUTIONS',['../equations_8h.html#aad6d6c64a88e64f99c12e5c5b62be168',1,'equations.h']]],
-  ['solvelinear_26',['solveLinear',['../equations_8cpp.html#af2005fa6cf1faa7b20918f5c5ae24086',1,'solveLinear(const double a, const double b, double *const x):&#160;equations.cpp'],['../equations_8h.html#af2005fa6cf1faa7b20918f5c5ae24086',1,'solveLinear(const double a, const double b, double *const x):&#160;equations.cpp']]],
-  ['solvesquare_27',['solveSquare',['../equations_8cpp.html#ae9de8abe76b6c8d7ac1ef2ab47998384',1,'solveSquare(const double a, const double b, const double c, double *const x1, double *const x2):&#160;equations.cpp'],['../equations_8h.html#ae9de8abe76b6c8d7ac1ef2ab47998384',1,'solveSquare(const double a, const double b, const double c, double *const x1, double *const x2):&#160;equations.cpp']]],
-  ['strform_28',['strForm',['../struct_m_o_d_e.html#ab25a8fd4373ad5759deb1af5da836fb3',1,'MODE']]]
+  ['readme_26',['README',['../md__home_timurabdullin_projects_quadratic_equation__r_e_a_d_m_e.html',1,'']]],
+  ['readme_2emd_27',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['red_28',['RED',['../colors_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'colors.h']]],
+  ['run_29',['run',['../equations_8h.html#a13a43e6d814de94978c515cb084873b1',1,'run():&#160;main.cpp'],['../main_8cpp.html#a13a43e6d814de94978c515cb084873b1',1,'run():&#160;main.cpp']]],
+  ['run_5fmode_30',['RUN_MODE',['../equations_8h.html#a847555108290b8c30e6cdff1eb9ae759adbef8108cc9b9ff34b003ebbd5690173',1,'equations.h']]]
 ];

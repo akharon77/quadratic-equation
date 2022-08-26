@@ -1,7 +1,12 @@
 #ifndef EQUATIONSH
 #define EQUATIONSH
 
+#include "colors.h"
+
 const double EPS = 1e-6;
+
+/*! Count of solutions of equations
+ */
 enum SOLUTIONS
 {
     ZERO_SOLUTIONS, 
@@ -11,6 +16,8 @@ enum SOLUTIONS
     ERROR_RET = -1
 };
 
+/*! Modes of program
+ */
 enum PROGRAM_MODES
 {
     TEST_FORCE_MODE,
@@ -20,6 +27,9 @@ enum PROGRAM_MODES
 };
 
 const int NMODES = 3;
+
+/*! Mode of program
+ */
 const struct MODE
 {
     const char *strForm;
@@ -104,5 +114,21 @@ int  sign(const double n);
  * \return true if buffer was filled by spaces and etc else false
  */
 bool clear_input();
+
+/*! Perfoms input
+ *
+ * \param[in] a Coefficient of x^2
+ * \param[in] b Coefficient of x
+ * \param[in] c Free term
+ */
+void input(double * const a, double * const b, double * const c);
+
+/*! Perfoms output
+ *
+ * \param[in] count Count of roots
+ * \param[in] x1 First root if exists
+ * \param[in] x2 Second root if exists
+ */
+void output(const int count, const double x1, const double x2);
 
 #endif
